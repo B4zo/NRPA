@@ -36,6 +36,9 @@
             this.btnMinus = new System.Windows.Forms.Button();
             this.lblRezultat = new System.Windows.Forms.Label();
             this.txtRezultat = new System.Windows.Forms.TextBox();
+            this.btnMnozenje = new System.Windows.Forms.Button();
+            this.btnDeljenje = new System.Windows.Forms.Button();
+            this.btnPonastavi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblStevilo1
@@ -73,7 +76,7 @@
             // btnPlus
             // 
             this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnPlus.Location = new System.Drawing.Point(90, 91);
+            this.btnPlus.Location = new System.Drawing.Point(105, 87);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(32, 32);
             this.btnPlus.TabIndex = 4;
@@ -84,17 +87,18 @@
             // btnMinus
             // 
             this.btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnMinus.Location = new System.Drawing.Point(158, 91);
+            this.btnMinus.Location = new System.Drawing.Point(143, 87);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(32, 32);
             this.btnMinus.TabIndex = 5;
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
             // lblRezultat
             // 
             this.lblRezultat.AutoSize = true;
-            this.lblRezultat.Location = new System.Drawing.Point(18, 141);
+            this.lblRezultat.Location = new System.Drawing.Point(18, 172);
             this.lblRezultat.Name = "lblRezultat";
             this.lblRezultat.Size = new System.Drawing.Size(61, 16);
             this.lblRezultat.TabIndex = 6;
@@ -102,17 +106,54 @@
             // 
             // txtRezultat
             // 
-            this.txtRezultat.Location = new System.Drawing.Point(90, 138);
+            this.txtRezultat.Location = new System.Drawing.Point(90, 166);
             this.txtRezultat.Name = "txtRezultat";
             this.txtRezultat.ReadOnly = true;
             this.txtRezultat.Size = new System.Drawing.Size(100, 22);
             this.txtRezultat.TabIndex = 7;
             // 
+            // btnMnozenje
+            // 
+            this.btnMnozenje.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnMnozenje.Location = new System.Drawing.Point(105, 125);
+            this.btnMnozenje.Name = "btnMnozenje";
+            this.btnMnozenje.Size = new System.Drawing.Size(32, 32);
+            this.btnMnozenje.TabIndex = 8;
+            this.btnMnozenje.Text = "*";
+            this.btnMnozenje.UseVisualStyleBackColor = true;
+            this.btnMnozenje.Click += new System.EventHandler(this.btnMnozenje_Click);
+            // 
+            // btnDeljenje
+            // 
+            this.btnDeljenje.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnDeljenje.Location = new System.Drawing.Point(143, 125);
+            this.btnDeljenje.Name = "btnDeljenje";
+            this.btnDeljenje.Size = new System.Drawing.Size(32, 32);
+            this.btnDeljenje.TabIndex = 9;
+            this.btnDeljenje.Text = "/";
+            this.btnDeljenje.UseVisualStyleBackColor = true;
+            this.btnDeljenje.Click += new System.EventHandler(this.btnDeljenje_Click);
+            // 
+            // btnPonastavi
+            // 
+            this.btnPonastavi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPonastavi.Location = new System.Drawing.Point(181, 87);
+            this.btnPonastavi.Name = "btnPonastavi";
+            this.btnPonastavi.Size = new System.Drawing.Size(32, 32);
+            this.btnPonastavi.TabIndex = 10;
+            this.btnPonastavi.Text = "C";
+            this.btnPonastavi.UseVisualStyleBackColor = true;
+            this.btnPonastavi.Click += new System.EventHandler(this.btnPonastavi_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(282, 353);
+            this.Controls.Add(this.btnPonastavi);
+            this.Controls.Add(this.btnDeljenje);
+            this.Controls.Add(this.btnMnozenje);
             this.Controls.Add(this.txtRezultat);
             this.Controls.Add(this.lblRezultat);
             this.Controls.Add(this.btnMinus);
@@ -141,6 +182,9 @@
         private System.Windows.Forms.Button btnMinus;
         private System.Windows.Forms.Label lblRezultat;
         private System.Windows.Forms.TextBox txtRezultat;
+        private System.Windows.Forms.Button btnMnozenje;
+        private System.Windows.Forms.Button btnDeljenje;
+        private System.Windows.Forms.Button btnPonastavi;
     }
 }
 
