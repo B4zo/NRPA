@@ -149,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(282, 353);
             this.Controls.Add(this.btnPonastavi);
             this.Controls.Add(this.btnDeljenje);
@@ -162,6 +162,7 @@
             this.Controls.Add(this.txtStevilo1);
             this.Controls.Add(this.lblStevilo2);
             this.Controls.Add(this.lblStevilo1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
