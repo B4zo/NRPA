@@ -12,6 +12,21 @@ namespace Vaja2_AljazSkafar
 {
     public partial class Form1 : Form
     {
+        string[] nazivPoklica = new string[9]
+        {
+            "Davčni svetovalec",
+            "Medicinska sestra",
+            "Kuhar",
+            "Mehanik",
+            "Služabnica",
+            "Policaj",
+            "Veterinarka",
+            "Vodovodar",
+            "Služabnik"
+        };
+        int stevilka;
+        int steviloZamenjav = 0;
+        int stevilkaPrejsnja = 0;
         public Form1()
         {
             InitializeComponent();
@@ -40,8 +55,21 @@ namespace Vaja2_AljazSkafar
         private void btnNaslednjiPoklic_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            int stevilka = rnd.Next(1, 10);
-            picSlikaPoklica.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + stevilka);
+            do
+            {
+                stevilka = rnd.Next(1, 10);
+            } while (stevilka == stevilkaPrejsnja);
+
+            picSlikaPoklica.Image = (Image)Properties.Resources.ResourceManager.GetObject(stevilka.ToString());
+            lblNazivPoklica.Text = nazivPoklica[stevilka - 1];
+            steviloZamenjav++;
+            lblSteviloZamenjav.Text = "Stevilo zamenjav: " + steviloZamenjav;
+            stevilkaPrejsnja = stevilka;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
